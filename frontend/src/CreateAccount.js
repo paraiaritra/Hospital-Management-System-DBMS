@@ -97,6 +97,11 @@ export class CreateAccount extends Component {
                 name="surgeries"
                 placeholder="Surgeries"
                />
+               <FormField
+                label="Blood Group"
+                name="Blood_Group"
+                placeholder="Blood Group"
+               />
               <FormField
                 label="Medical History - Medications"
                 name="medications"

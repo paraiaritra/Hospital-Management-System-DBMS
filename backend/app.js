@@ -6,21 +6,47 @@ var path = require('path');
 var mysql = require('mysql');
 var cors = require('cors');
 var port = 3001
+var fs = require('fs');
 
-//Connection Info
+
 var con = mysql.createConnection({
   host: 'localhost',
-  user: 'hathalye7',
-  password: 'hrishikesh',
+  user: 'root',
+  password: '@Ankur123',
   database: 'HMS',
   multipleStatements: true
 });
 
-//Connecting To Database
+// ✅ Connect to MySQL
 con.connect(function (err) {
   if (err) throw err;
-  console.log("Connected to MySQL");
+  console.log("✅ Connected to MySQL");
+
+  // ✅ Run two SQL files on startup
+  // runSQLFiles();
 });
+
+// // ✅ Function to Execute Two SQL Files
+// function runSQLFiles() {
+//   try {
+//     const sqlFile1 = fs.readFileSync('../DDL.sql', 'utf8');
+//     const sqlFile2 = fs.readFileSync('../InsertDML.sql', 'utf8');
+
+//     con.query(sqlFile1, (err, result) => {
+//       if (err) throw err;
+//       console.log("✅ file1.sql executed successfully");
+
+//       con.query(sqlFile2, (err, result) => {
+//         if (err) throw err;
+//         console.log("✅ file2.sql executed successfully");
+//       });
+//     });
+
+//   } catch (error) {
+//     console.error("❌ Error reading SQL files:", error);
+//   }
+// }
+
 
 //Variables to keep state info about who is logged in
 var email_in_use = "";
@@ -55,6 +81,8 @@ app.get('/checkIfPatientExists', (req, res) => {
     };
   });
 });
+
+app.get("/test",(req,res)=> res.send("HELLO"))
 
 //Creates User Account
 app.get('/makeAccount', (req, res) => {
