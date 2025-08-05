@@ -20,7 +20,7 @@ const theme = {
       family: 'Lato',
     },
   },
-};
+}
 
 const SidebarButton = ({ label, ...rest }) => (
   <Button plain {...rest}>
@@ -80,7 +80,7 @@ const SidebarButtons = () => {
       </Box>
     </Grommet>
   );
-};
+}
 export class Home extends Component {
   renderName = ({ name, email }) => <div key={email}>{name} {name}</div>
 
@@ -97,7 +97,7 @@ export class Home extends Component {
         flex={false}
         style={{borderBottom:"1px solid grey"}}
       >
-        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>MAKAUT Healthcare Management</Heading></a>
       </Box>
     );
 

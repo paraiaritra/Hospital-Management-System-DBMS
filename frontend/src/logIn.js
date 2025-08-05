@@ -23,7 +23,7 @@ const theme = {
       family: 'Lato',
     },
   },
-};
+}
 
 const AppBar = (props) => (
   <Box
@@ -55,7 +55,7 @@ class LogIn extends Component {
     return (
       <Grommet theme={theme} full>
         <AppBar>
-        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>MAKAUT Healthcare Management</Heading></a>
         </AppBar>
 
         <Box

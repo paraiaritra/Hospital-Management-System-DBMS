@@ -19,7 +19,7 @@ const theme = {
       family: 'Lato',
     },
   },
-};
+}
 var diagnosis;
 var prescription;
 var id;
@@ -41,7 +41,7 @@ const DiagnosisTextArea = () => {
   const onChange = event => {
     setValue(event.target.value);
     diagnosis = event.target.value;
-  };
+  }
 
   return (
     <Grommet theme={theme}>
@@ -56,14 +56,14 @@ const DiagnosisTextArea = () => {
         required />
     </Grommet>
   );
-};
+}
 
 const PrescriptionTextArea = () => {
   const [value, setValue] = React.useState(" ");
   const onChange = event => {
     setValue(event.target.value);
     prescription = event.target.value;
-  };
+  }
   return (
     <Grommet theme={theme}>
         <h4>Prescription</h4>
@@ -76,7 +76,7 @@ const PrescriptionTextArea = () => {
           required />
     </Grommet>
   );
-};
+}
 
 export class Diagnose extends Component {
   constructor(props) {
@@ -87,7 +87,7 @@ export class Diagnose extends Component {
     return (
       <Grommet theme={theme} full>
         <AppBar>
-        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>MAKAUT Healthcare Management</Heading></a>
         </AppBar>
         <Box align="center" gap="small">
           <Form

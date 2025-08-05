@@ -18,7 +18,7 @@ const theme = {
         family: 'Lato',
       },
     },
-  };
+  }
 
 export class DocViewAppt extends Component {
     state = { apptlist: [] }
@@ -46,7 +46,7 @@ export class DocViewAppt extends Component {
                 align='center'
                 flex={false}
             >
-                <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+                <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>MAKAUT Healthcare Management</Heading></a>
             </Box>
         );
 

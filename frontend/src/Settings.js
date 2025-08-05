@@ -21,7 +21,7 @@ const theme = {
             family: 'Lato',
         },
     },
-};
+}
 
 const AppBar = (props) => (
     <Box
@@ -42,7 +42,7 @@ export class Settings extends Component {
             <Grommet theme={theme} full>
                 <Box >
                     <AppBar>
-                    <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+                    <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>MAKAUT Healthcare Management</Heading></a>
                     </AppBar>
                     <Box pad="small">
                     <Form

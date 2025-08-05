@@ -20,7 +20,7 @@ const theme = {
             family: 'Lato',
         },
     },
-};
+}
 
 const SidebarButton = ({ label, ...rest }) => (
     <Button plain {...rest}>
@@ -69,7 +69,7 @@ const SidebarButtons = () => {
             </Box>
         </Grommet>
     );
-};
+}
 
 export class DocHome extends Component {
     componentDidMount() {
@@ -88,7 +88,7 @@ export class DocHome extends Component {
                 flex={false}
                 style={{borderBottom:"1px solid grey"}}
             >
-                <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+                <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>MAKAUT Healthcare Management</Heading></a>
 
             </Box>
         );

@@ -17,7 +17,7 @@ const theme = {
             family: 'Lato',
         },
     },
-};
+}
 
 export class NoMedHistFound extends Component {
     componentDidMount() {
@@ -34,7 +34,7 @@ export class NoMedHistFound extends Component {
                 align='center'
                 flex={false}
             >
-                <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+                <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>MAKAUT Healthcare Management</Heading></a>
 
             </Box>
         );

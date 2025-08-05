@@ -28,7 +28,7 @@ const theme = {
       family: 'Lato',
     },
   },
-};
+}
 var theDate;
 var theTime;
 var endTime;
@@ -69,7 +69,7 @@ const DropContent = ({ date: initialDate, time: initialTime, onClose }) => {
     console.log(theDate)
     console.log(theTime);
     onClose(date || initialDate, time || initialTime);
-  };
+  }
 
   return (
     <Box align="center">
@@ -142,7 +142,7 @@ const DropContent = ({ date: initialDate, time: initialTime, onClose }) => {
       </Box>
     </Box>
   );
-};
+}
 
 const DateTimeDropButton = () => {
   const [date, setDate] = React.useState();
@@ -154,7 +154,7 @@ const DateTimeDropButton = () => {
     setTime(nextTime);
     setOpen(false);
     setTimeout(() => setOpen(undefined), 1);
-  };
+  }
 
   return (
     <Grommet theme={theme}>
@@ -179,7 +179,7 @@ const DateTimeDropButton = () => {
       </Box>
     </Grommet>
   );
-};
+}
 
 const ConcernsTextArea = () => {
   const [value, setValue] = React.useState("");
@@ -187,7 +187,7 @@ const ConcernsTextArea = () => {
   const onChange = event => {
     setValue(event.target.value);
     theConcerns = event.target.value;
-  };
+  }
 
   return (
     <Grommet theme={theme}>
@@ -204,7 +204,7 @@ const ConcernsTextArea = () => {
       </Box>
     </Grommet>
   );
-};
+}
 
 const SymptomsTextArea = () => {
   const [value, setValue] = React.useState("");
@@ -212,7 +212,7 @@ const SymptomsTextArea = () => {
   const onChange = event => {
     setValue(event.target.value);
     theSymptoms = event.target.value;
-  };
+  }
 
   return (
     <Grommet theme={theme}>
@@ -228,7 +228,7 @@ const SymptomsTextArea = () => {
       </Box>
     </Grommet>
   );
-};
+}
 
 function DoctorsDropdown() {
   const [value, setValue] = useState();
@@ -249,7 +249,7 @@ function DoctorsDropdown() {
     setValue(event.value);
     let doc = event.value.match(/\((.*)\)/)[1];
     theDoc = doc;
-  };
+  }
   return (
     <Select
       options={doctorsList}
@@ -268,7 +268,7 @@ export class SchedulingAppt extends Component {
     return (
       <Grommet theme={theme} full>
         <AppBar>
-        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>HMS</Heading></a>
+        <a style={{ color: 'inherit', textDecoration: 'inherit'}} href="/"><Heading level='3' margin='none'>MAKAUT Healthcare Management</Heading></a>
         </AppBar>
         <Box align="center" pad="small" gap="small">
           <Form
@@ -283,9 +283,9 @@ export class SchedulingAppt extends Component {
                   fetch("http://localhost:3001/checkIfApptExists?email=" + email_in_use + "&startTime=" + theTime + "&date=" + theDate + "&docEmail=" + theDoc)
                     .then(res => res.json())
                     .then(res => {
-                      if ((res.data[0])) {
-                        window.alert("Appointment Clash! Try another doctor or date/time");
-                      } else {
+                      // if ((res.data[0])) {
+                      //   window.alert("Appointment Clash! Try another doctor or date/time");
+                      // } else {
                         fetch("http://localhost:3001/genApptUID")
                           .then(res => res.json())
                           .then(res => {
@@ -302,7 +302,7 @@ export class SchedulingAppt extends Component {
                                 });
                             })
                           });
-                      }
+                      // }
                     });
                 });
             }}
